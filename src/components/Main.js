@@ -1,4 +1,5 @@
 import React from "react";
+import avatar from '../images/avatar.jpg';
 
 function Main(props) {  
   return (
@@ -11,7 +12,7 @@ function Main(props) {
             onClick={props.onEditAvatar}
           ></button>
           <img
-            src="<%=require('./images/avatar.jpg')%>"
+            src={avatar}
             alt="Аватар"
             className="profile__avatar"
           />
@@ -21,9 +22,7 @@ function Main(props) {
               type="button"
               className="profile__edit-button"
               onClick={props.onEditProfile}
-            >
-              Редактировать
-            </button>
+            />
             <p className="profile__subtitle">Исследователь океана</p>
           </div>
         </div>
