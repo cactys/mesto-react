@@ -38,5 +38,4 @@ export {
   jobInput,
   formAvatar,
   formPhoto,
-  API_CONFIG,
 };

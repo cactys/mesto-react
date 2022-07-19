@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import avatar from '../images/avatar.jpg';
 import api from '../utils/api';
+import Card from './Card';
 
 function Main(props) {
-  const [userName, setUserName] = useState();
-  const [userDescription, setUserDescription] = useState();
-  const [userAvatar, setUserAvatar] = useState();
-  const [cards, setCards] = useState();
+  const [userName, setUserName] = useState('');
+  const [userDescription, setUserDescription] = useState('');
+  const [userAvatar, setUserAvatar] = useState('');
+  const [cards, setCards] = useState([]);
 
   useEffect(() => {
     api
@@ -55,21 +55,7 @@ function Main(props) {
       <div className="grid">
         <ul className="cards">
           {cards.map((item) => (
-            <li className="card">
-              <button className="card__trach-icon" type="button">
-                Удалить
-              </button>
-              <img className="card__image" />
-              <div className="card__description">
-                <h3 className="card__name"></h3>
-                <div className="card__like-container">
-                  <button className="card__like-button" type="button">
-                    Нравится
-                  </button>
-                  <p className="card__like-count"></p>
-                </div>
-              </div>
-            </li>
+            <Card key={item._id} card={item} onCardClick={props.onCardClick} />
           ))}
         </ul>
       </div>
