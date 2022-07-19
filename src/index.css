@@ -1,12 +1,12 @@
-@import url(../src/vendor/normalize.css);
+@import url(./vendor/normalize.css);
 @import url(../src/vendor/font.css);
 
-@import url(../src/blocks/body/body.css);
 @import url(../src/blocks/page/page.css);
 
 @import url(../src/blocks/header/header.css);
 @import url(../src/blocks/header/__logo/header__logo.css );
 
+@import url(../src/blocks/content/content.css);
 @import url(../src/blocks/profile/profile.css);
 @import url(../src/blocks/profile/__data/profile__data.css);
 @import url(../src/blocks/profile/__profile-info/profile__profile-info.css);

@@ -6,12 +6,11 @@ import ImagePopup from './ImagePopup';
 import Footer from './Footer';
 
 function App() {
-  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] =
-    React.useState(false);
+  // это Prettier так хулиганит. Я делаю это в одну строку, а он считает что строка слишком длинная для него.
+  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
-  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] =
-    React.useState(false);
-  const [selectedCard, setSelectedCard] = React.useState();
+  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
+  const [selectedCard, setSelectedCard] = React.useState(null);
   const [isOpen, setIsOpen] = React.useState(false);
 
   const handleEditProfile = () => {
