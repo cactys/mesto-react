@@ -5,7 +5,6 @@
 + [React](https://ru.reactjs.org/docs/getting-started.html)  
 
 Проект собрат при помощи Create React App (CRA)
-[Ссылка на gh-pages проект](https://cactys.github.io/mesto-react/)
 ---
 
 &copy; 2022 Mesto Russia
