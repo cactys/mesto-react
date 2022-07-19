@@ -26,10 +26,15 @@ function App() {
     setIsEditAvatarPopupOpen(true);
   };
 
+  const closePopap = () => {
+    setIsEditProfilePopupOpen(false);
+    setIsAddPlacePopupOpen(false);
+    setIsEditAvatarPopupOpen(false);
+  };
+
   return (
-    // <div className="App">
-    <body className="body">
-      <div className="page">
+    <div className="body">
+      <section className="page">
         <Header />
         <Main
           onEditProfile={handleEditProfile}
@@ -41,6 +46,7 @@ function App() {
           title="Редактировать профиль"
           buttonText="Сохранить"
           isOpen={isEditProfilePopupOpen}
+          onClose={closePopap}
         >
           <fieldset className="form__set">
             <label className="form__field">
@@ -76,6 +82,7 @@ function App() {
           title="Новое место"
           buttonText="Создать"
           isOpen={isAddPlacePopupOpen}
+          onClose={closePopap}
         >
           <fieldset className="form__set">
             <label className="form__field">
@@ -109,6 +116,7 @@ function App() {
           title="Обновить аватар"
           buttonText="Сохранить"
           isOpen={isEditAvatarPopupOpen}
+          onClose={closePopap}
         >
           <fieldset className="form__set">
             <label className="form__field">
@@ -126,9 +134,8 @@ function App() {
         </PopupWithForm>
         <ImagePopup />
         <Footer />
-      </div>
-    </body>
-    // </div>
+      </section>
+    </div>
   );
 }
 
