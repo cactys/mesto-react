@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import api from '../utils/api';
 import Card from './Card';
 
-function Main(props) {
+function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick }) {
   const [userName, setUserName] = useState('');
   const [userDescription, setUserDescription] = useState('');
   const [userAvatar, setUserAvatar] = useState('');
@@ -32,7 +32,7 @@ function Main(props) {
           <button
             type="button"
             className="profile__avatar-edit"
-            onClick={props.onEditAvatar}
+            onClick={onEditAvatar}
           ></button>
           <img src={userAvatar} alt="Аватар" className="profile__avatar" />
           <div className="profile__profile-info">
@@ -40,22 +40,18 @@ function Main(props) {
             <button
               type="button"
               className="profile__edit-button"
-              onClick={props.onEditProfile}
+              onClick={onEditProfile}
             />
             <p className="profile__subtitle">{userDescription}</p>
           </div>
         </div>
-        <button
-          type="button"
-          className="profile__add-button"
-          onClick={props.onAddPlace}
-        />
+        <button type="button" className="profile__add-button" onClick={onAddPlace} />
       </section>
 
       <div className="grid">
         <ul className="cards">
           {cards.map((item) => (
-            <Card key={item._id} card={item} onCardClick={props.onCardClick} />
+            <Card key={item._id} card={item} onCardClick={onCardClick} />
           ))}
         </ul>
       </div>

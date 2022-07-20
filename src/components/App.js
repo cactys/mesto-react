@@ -6,7 +6,6 @@ import ImagePopup from './ImagePopup';
 import Footer from './Footer';
 
 function App() {
-  // это Prettier так хулиганит. Я делаю это в одну строку, а он считает что строка слишком длинная для него.
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
@@ -138,11 +137,7 @@ function App() {
           </label>
         </fieldset>
       </PopupWithForm>
-      <ImagePopup
-        card={selectedCard}
-        isOpen={isOpen}
-        onClose={closeAllPopups}
-      />
+      <ImagePopup card={selectedCard} isOpen={isOpen} onClose={closeAllPopups} />
       <Footer />
     </div>
   );
