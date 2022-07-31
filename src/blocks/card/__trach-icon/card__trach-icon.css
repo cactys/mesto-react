@@ -20,3 +20,11 @@
 .card__trach-icon:hover {
   opacity: 0.6;
 }
+
+.card__trach-icon_visible {
+  display: block;
+}
+
+.card__trach-icon_hidden {
+  display: none;
+}

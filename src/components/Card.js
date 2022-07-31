@@ -1,11 +1,32 @@
-function Card({ card, onCardClick }) {
+import React from 'react';
+import { CurrentUserContext } from '../contexts/CurrentUserContext';
+
+function Card({ card, onCardClick, onCardLike, onCardDelete }) {
+  const currentUser = React.useContext(CurrentUserContext);
+  const isOwn = card.owner._id === currentUser._id;
+  const cardDeleteButtonClassName = `card__trach-icon ${
+    isOwn ? 'card__trach-icon_visible' : 'card__trach-icon_hidden'
+  }`;
+  const isLiked = card.likes.some((i) => i._id === currentUser._id);
+  const cardLikeButtonClassName = `card__like-button ${
+    isLiked ? 'card__like-button_active' : 'card__like-button'
+  }`;
+
   function handleClick() {
     onCardClick(card);
   }
 
+  function handleLikeClick() {
+    onCardLike(card);
+  }
+
+  function handleDeleteClick() {
+    onCardDelete(card);
+  }
+
   return (
     <li className="card">
-      <button className="card__trach-icon" type="button" />
+      <button className={cardDeleteButtonClassName} type="button" onClick={handleDeleteClick} />
       <img
         className="card__image"
         alt={card.name}
@@ -15,7 +36,11 @@ function Card({ card, onCardClick }) {
       <div className="card__description">
         <h3 className="card__name">{card.name}</h3>
         <div className="card__like-container">
-          <button className="card__like-button" type="button" />
+          <button
+            className={cardLikeButtonClassName}
+            type="button"
+            onClick={handleLikeClick}
+          />
           <p className="card__like-count">{card.likes.length}</p>
         </div>
       </div>

@@ -64,6 +64,10 @@ class Api {
     }).then(this._checkingResponse);
   }
 
+  changeLikeCardStatus(id, state) {
+    return state ? this.putLike(id) : this.deletLike(id);
+  }
+
   putLike(id) {
     return fetch(`${this._url}/cards/likes/${id}`, {
       method: 'PUT',
