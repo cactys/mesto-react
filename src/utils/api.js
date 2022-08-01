@@ -24,7 +24,7 @@ class Api {
       headers: this._headers,
       body: JSON.stringify({
         name: data.name,
-        about: data.job,
+        about: data.about,
       }),
     }).then(this._checkingResponse);
   }
@@ -34,7 +34,7 @@ class Api {
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
-        avatar: data.src,
+        avatar: data.avatar,
       }),
     }).then(this._checkingResponse);
   }
@@ -52,7 +52,7 @@ class Api {
       headers: this._headers,
       body: JSON.stringify({
         name: data.title,
-        link: data.src,
+        link: data.link,
       }),
     }).then(this._checkingResponse);
   }

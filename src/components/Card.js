@@ -1,8 +1,8 @@
-import React from 'react';
+import { useContext } from 'react';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
 function Card({ card, onCardClick, onCardLike, onCardDelete }) {
-  const currentUser = React.useContext(CurrentUserContext);
+  const currentUser = useContext(CurrentUserContext);
   const isOwn = card.owner._id === currentUser._id;
   const cardDeleteButtonClassName = `card__trach-icon ${
     isOwn ? 'card__trach-icon_visible' : 'card__trach-icon_hidden'
@@ -26,7 +26,11 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
 
   return (
     <li className="card">
-      <button className={cardDeleteButtonClassName} type="button" onClick={handleDeleteClick} />
+      <button
+        className={cardDeleteButtonClassName}
+        type="button"
+        onClick={handleDeleteClick}
+      />
       <img
         className="card__image"
         alt={card.name}
