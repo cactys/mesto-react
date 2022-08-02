@@ -59,8 +59,8 @@ function App() {
   };
 
   const handleCardDelete = (card) => {
-    api.deletCard(card._id).then(() => {
-      setCards((cards) => cards.filter((c) => (c._id === card._id ? '' : c)));
+    api.deleteCard(card._id).then(() => {
+      setCards((state) => state.filter((c) => c._id !== card._id));
     });
   };
 
