@@ -8,11 +8,13 @@ import { CurrentUserContext } from '../contexts/CurrentUserContext';
 import EditProfilePopup from './EditProfilePopup';
 import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
+import ConfirmDeletePopup from './ConfirmDeletePopup';
 
 function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
+  const [isConfirmPopupOpen, setIsConfirmPopupOpen] = useState(false);
   const [selectedCard, setSelectedCard] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [currentUser, setCurrentUser] = useState('');
@@ -45,6 +47,10 @@ function App() {
     setIsEditAvatarPopupOpen(true);
   };
 
+  const handleConfirmDeleteCard = () => {
+    setIsConfirmPopupOpen(true);
+  };
+
   const handleCardClick = (selectedCard) => {
     setIsOpen(true);
     setSelectedCard(selectedCard);
@@ -67,6 +73,7 @@ function App() {
   const closeAllPopups = () => {
     setIsEditProfilePopupOpen(false);
     setIsEditAvatarPopupOpen(false);
+    setIsConfirmPopupOpen(false);
     setIsAddPlacePopupOpen(false);
     setSelectedCard(false);
     setIsOpen(false);
@@ -111,6 +118,7 @@ function App() {
           onAddPlace={handleAddPlaceClick}
           onEditAvatar={handleEditAvatarClick}
           onCardClick={handleCardClick}
+          onConfirmDelete={handleConfirmDeleteCard}
           cards={cards}
           onCardDelete={handleCardDelete}
           onCardLike={handleCardLike}
@@ -130,6 +138,7 @@ function App() {
           onClose={closeAllPopups}
           onAddPlace={handleAddPlaceSubmit}
         />
+        <ConfirmDeletePopup />
         <ImagePopup card={selectedCard} isOpen={isOpen} onClose={closeAllPopups} />
         <Footer />
       </CurrentUserContext.Provider>
