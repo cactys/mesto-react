@@ -15,7 +15,6 @@ function PopupWithForm({
           className="form form_edit-profile"
           name={`${name}-form`}
           onSubmit={onSubmit}
-          noValidate
         >
           <h2 className="form__title">{title}</h2>
           {children}

@@ -58,18 +58,9 @@ function App() {
     });
   };
 
-  // const handleCardDelete = (card) => {
-  //   api.deletCard(card._id).then((newCard) => {
-  //     setCards((cards) => cards.filter((c) => (c._id === card._id ? newCard : c)));
-  //   });
-  // };
-
   const handleCardDelete = (card) => {
     api.deletCard(card._id).then(() => {
-      const newCard = cards.filter((c) => {
-        return c._id !== card._id;
-      });
-      setCards(newCard);
+      setCards((cards) => cards.filter((c) => (c._id === card._id ? '' : c)));
     });
   };
 
