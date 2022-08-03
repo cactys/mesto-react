@@ -58,6 +58,7 @@ function App() {
       .then((newCard) => {
         setCards((state) => state.map((c) => (c._id === card._id ? newCard : c)));
       })
+      //совсем забыл =)
       .catch((err) => console.log(err));
   };
 
