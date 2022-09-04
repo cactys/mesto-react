@@ -48,7 +48,6 @@
 ### Цель, изучить и закрепить на практике
 + [React](https://ru.reactjs.org/docs/getting-started.html)  
 
-
 ## Установка и запуск приложения:
 
 Клонировать репозиторий:
@@ -64,6 +63,6 @@
     npm run start
 
 ---
-**Проект собрат при помощи Create React App (CRA)**  
-[Ссылка на DEMO проекта](https://cactys.github.io/mesto-react/)  
+**Проект собрат при помощи Create React App (CRA)  
+*[Ссылка на DEMO проекта](https://cactys.github.io/mesto-react/)  
 &copy; 2022 Mesto Russia
