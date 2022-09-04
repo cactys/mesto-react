@@ -53,11 +53,11 @@
 
 Клонировать репозиторий:
 
-    git clone https://github.com/ShmelevKirill/mesto-react.git
+    git clone https://github.com/cactys/mesto-react.git
 
 Установить зависимости:
 
-    npm install
+    npm i
 
 Запустить приложение:
 
