@@ -63,6 +63,6 @@
     npm run start
 
 ---
-**Проект собрат при помощи Create React App (CRA)  
-*[Ссылка на DEMO проекта](https://cactys.github.io/mesto-react/)  
-&copy; 2022 Mesto Russia
+**Проект собрат при помощи Create React App (CRA)**  
+*[Ссылка на DEMO проекта](https://cactys.github.io/mesto-react/)*  
+*&copy; 2022 Mesto Russia*
