@@ -1,3 +1,4 @@
+**[Ссылка на DEMO проекта](https://cactys.github.io/mesto-react/)**  
 # Mesto 
 Интерактивная страница, на которой пользователи могут делиться фотографиями, удалять их и ставить лайки.
 
@@ -65,5 +66,4 @@
 
 ---
 **Проект собрат при помощи Create React App (CRA)**  
-*[Ссылка на DEMO проекта](https://cactys.github.io/mesto-react/)*  
 *&copy; 2022 Mesto Russia*
