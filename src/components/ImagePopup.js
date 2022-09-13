@@ -1,7 +1,7 @@
 function ImagePopup({ isOpen, onClose, card }) {
   return (
-    <div className={`popup popup_type_photo ${isOpen && 'popup_opened'}`}>
-      <div className="popup__container">
+    <div className={`popup popup_type_photo ${isOpen && 'popup_opened'}`} onClick={onClose}>
+      <div className="popup__container" onClick={evt => evt.stopPropagation()}>
         <button className="popup__close" type="button" onClick={onClose} />
         <figure className="photo-container">
           <img
