@@ -12,7 +12,10 @@ function PopupWithForm({
       className={`popup popup_type_${name} ${isOpen && "popup_opened"}`}
       onClick={onClose}
     >
-      <div className="popup__container" onClick={(evt) => evt.stopPropagation()}>
+      <div
+        className={`popup__container ${isOpen && "active"}`}
+        onClick={(evt) => evt.stopPropagation()}
+      >
         <button className="popup__close" type="button" onClick={onClose} />
         <form
           className="form form_edit-profile"

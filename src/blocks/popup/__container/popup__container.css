@@ -8,6 +8,12 @@
   padding: 34px 36px 37px;
   max-width: 430px;
   width: 100%;
+  transform: scale(0.5);
+  transition: 0.4s all;
+}
+
+.popup__container.active {
+  transform: scale(1);
 }
 
 .popup_type_photo .popup__container {

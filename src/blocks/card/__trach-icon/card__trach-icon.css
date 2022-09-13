@@ -14,10 +14,11 @@
   background-repeat: no-repeat;
   align-self: center;
   font-size: 0px;
-  transition: opacity 0.4s;
+  transition: 0.4s all;
 }
 
 .card__trach-icon:hover {
+  transform: scale(1.3);
   opacity: 0.6;
 }
 
